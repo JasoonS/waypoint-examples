@@ -12,10 +12,10 @@ app "kubernetes-nodejs-web" {
   build {
     use "pack" {}
     registry {
-      use "docker" {
-        image = "kubernetes-nodejs-web"
-        tag   = "1"
-        local = true
+      use "aws-ecr" {
+        region     = "us-east-2"
+        repository = "envio-repository"
+        tag        = "latest"
       }
     }
   }
