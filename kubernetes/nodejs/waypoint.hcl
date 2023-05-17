@@ -15,7 +15,7 @@ app "kubernetes-nodejs-web" {
       use "aws-ecr" {
         region     = "us-east-2"
         repository = "envio-repository"
-        tag        = "latest"
+        tag        = "latest-5"
       }
     }
   }
@@ -26,11 +26,10 @@ app "kubernetes-nodejs-web" {
     }
   }
 
-  release {
+   release {
     use "kubernetes" {
-      // Sets up a load balancer to access released application
       load_balancer = true
-      port          = 3000
+      port          = 80
     }
   }
 }
