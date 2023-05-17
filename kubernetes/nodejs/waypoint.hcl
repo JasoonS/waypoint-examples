@@ -15,7 +15,7 @@ app "kubernetes-nodejs-web" {
       use "aws-ecr" {
         region     = "us-east-2"
         repository = "envio-repository"
-        tag        = "latest-5"
+        tag        = "some-docker-tag-1"
       }
     }
   }
